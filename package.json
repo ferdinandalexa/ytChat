@@ -1,0 +1,24 @@
+{
+  "name": "ytchat",
+  "private": true,
+  "description": "Customize visually your Youtube Streaming Chat",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --port 8080",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "semistandard": "16.0.1",
+    "stylelint": "14.16.1",
+    "stylelint-config-idiomatic-order": "9.0.0",
+    "vite": "4.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "semistandard"
+    ]
+  }
+}
