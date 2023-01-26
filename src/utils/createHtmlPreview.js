@@ -1,6 +1,6 @@
-import { RegularMessage } from './components/regular-message';
-import { SponsorMessage } from './components/sponsors-messages';
-import { SuperChat } from './components/super-chat';
+import { RegularMessage } from './regular-message';
+import { SponsorMessage } from './sponsors-messages';
+import { SuperChat } from './super-chat';
 
 /** @param {string} styles */
 export function createHtmlPreview (styles = '') {

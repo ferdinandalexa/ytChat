@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+ul, ol, li{
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2,h3, h4, h5, h6{
+  margin: 0;
+}
+
+html, 
+body, 
+main{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  overflow: hidden;
+  background-color: #666;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.setting-panel{
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  padding: 1rem;
+  background-color: #212121;
+  color: #fff;
+}
+
+.set summary{
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  background-color:#424242;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  user-select: none;
+}
+
+.set h2{
+  margin: 0;
+  font-size: 1rem;
+}
+
+.set ul{
+  padding-inline: 1rem;
+}
+
+.set li{
+  margin-bottom: 1.25rem;
+}
+
+
+.set .adjustment h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+  border: 4px solid #212121;
+}

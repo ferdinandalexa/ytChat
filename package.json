@@ -10,7 +10,12 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
   "devDependencies": {
+    "@vitejs/plugin-react": "3.0.1",
     "semistandard": "16.0.1",
     "stylelint": "14.16.1",
     "stylelint-config-idiomatic-order": "9.0.0",
@@ -18,7 +23,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "semistandard"
+      "semistandard",
+      "standard-jsx"
     ]
   }
 }
