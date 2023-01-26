@@ -1,4 +1,4 @@
-export function generateChatStyles ({ chat, messages }) {
+export function generateChatStyles ({ chat, messages, sponsors }) {
   return `
   /* ********************** */
   /* *** Chat Container *** */
@@ -60,12 +60,7 @@ export function generateChatStyles ({ chat, messages }) {
     font-size: 1.8rem !important;
     line-height: 1.25 !important;
   }
-  
-  yt-live-chat-legacy-paid-message-renderer {
-    padding: 1.75rem !important;
-    padding-bottom: 1.75rem !important;
-  }
-  
+
   /** *** Spacing between messages *** */
   yt-live-chat-text-message-renderer,
   yt-live-chat-text-message-renderer[is-highlighted],
@@ -202,18 +197,21 @@ export function generateChatStyles ({ chat, messages }) {
   
   yt-live-chat-legacy-paid-message-renderer {
     width: initial !important;
-    background-color: hsl(150deg 82% 35%) !important;
-    color: white !important;
+    padding-inline: ${sponsors['padding-inline']}px !important;
+    padding-block: ${sponsors['padding-block']}px !important;
+    background-color: ${sponsors['background-color']} !important;
   }
   
   yt-live-chat-legacy-paid-message-renderer #event-text {
     font-weight: 700 !important;
+    margin-bottom: ${sponsors.spacing}px !important; 
+    color: ${sponsors['event-color']} !important;
   }
-  
-  yt-live-chat-paid-message-renderer #purchase-amount,
+
   yt-live-chat-legacy-paid-message-renderer #detail-text {
-    margin-top: 4px !important;
+    color: ${sponsors['detail-color']} !important;
   }
+
   
   /* ****************** */
   /* *** Animations *** */

@@ -1,6 +1,7 @@
 import PropertySet from './property-set';
 import PropertyAdjustmentChat from './property-adjustment-chat';
 import PropertyAdjustmentMessage from './property-adjustment-message';
+import PropertyAdjustmentSponsor from './property-adjustment-sponsor';
 
 function SettingsPanel () {
   return (
@@ -52,6 +53,35 @@ function SettingsPanel () {
           type='number'
           title='spacing'
           label={['between name and message']}
+          properties={['spacing']}
+          min={0}
+        />
+      </PropertySet>
+
+      <PropertySet name='sponsors'>
+        <PropertyAdjustmentSponsor
+          type='text'
+          title='text color'
+          label={['title color', 'message color']}
+          properties={['event-color', 'detail-color']}
+        />
+        <PropertyAdjustmentSponsor
+          type='text'
+          title='background'
+          label={['color']}
+          properties={['background-color']}
+        />
+        <PropertyAdjustmentSponsor
+          type='number'
+          title='padding'
+          label={['horizontal', 'vertical']}
+          properties={['padding-inline', 'padding-block']}
+          min={0}
+        />
+        <PropertyAdjustmentSponsor
+          type='number'
+          title='spacing'
+          label={['between title and message']}
           properties={['spacing']}
           min={0}
         />

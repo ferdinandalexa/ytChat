@@ -21,7 +21,14 @@ const initialStyles = {
     moderator: {},
     member: {}
   },
-  sponsors: {},
+  sponsors: {
+    'event-color': '#FFFFFF',
+    'detail-color': '#FFFFFF',
+    'padding-inline': 16,
+    'padding-block': 16,
+    'background-color': '#10A259',
+    spacing: 8
+  },
   superchat: {},
   animation: {}
 };
@@ -29,3 +36,4 @@ const initialStyles = {
 export const stylesAtom = atom(initialStyles);
 export const chatStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('chat'));
 export const messageStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('messages'));
+export const sponsorStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('sponsors'));
