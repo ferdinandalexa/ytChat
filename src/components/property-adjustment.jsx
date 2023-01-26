@@ -16,17 +16,19 @@ function PropertyAdjustment ({ title, properties, type, ...props }) {
   return (
     <li className='adjustment'>
       <h3 className='capitalize'>{title}</h3>
-      {properties.map((property) =>
-        <input
-          key={`${title}-${property}`}
-          className='input'
-          type={type}
-          data-property={property}
-          defaultValue={chatStyles[property]}
-          onChange={handleChange}
-          {...props}
-        />
-      )}
+      <div>
+        {properties.map((property) =>
+          <input
+            key={`${title}-${property}`}
+            className='input'
+            type={type}
+            data-property={property}
+            defaultValue={chatStyles[property]}
+            onChange={handleChange}
+            {...props}
+          />
+        )}
+      </div>
     </li>
   );
 }

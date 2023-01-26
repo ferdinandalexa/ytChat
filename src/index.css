@@ -72,8 +72,20 @@ input{
 
 
 .set .adjustment h3 {
+  margin-bottom: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.set .adjustment div{
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+
+.set .adjustment .input{
+  width: 100%;
 }
 
 .capitalize{
