@@ -75,6 +75,13 @@ export function generateChatStyles ({ chat }) {
   yt-live-chat-legacy-paid-message-renderer {
     margin-bottom: ${chat['margin-bottom']}px !important;
   }
+
+  yt-live-chat-text-message-renderer:last-child,
+  yt-live-chat-text-message-renderer[is-highlighted]:last-child,
+  yt-live-chat-paid-message-renderer:last-child,
+  yt-live-chat-legacy-paid-message-renderer:last-child {
+    margin-bottom: 0 !important;
+  }
   
   /* *** Hide some elements *** */
   yt-live-chat-text-message-renderer #author-photo,
