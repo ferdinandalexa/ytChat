@@ -7,7 +7,16 @@ const initialStyles = {
     'padding-inline': 10,
     'padding-block': 10,
     'margin-bottom': 10
-  }
+  },
+  messages: {
+    appearence: {},
+    owner: {},
+    moderator: {},
+    member: {}
+  },
+  sponsors: {},
+  superchat: {},
+  animation: {}
 };
 
 export const stylesAtom = atom(initialStyles);
