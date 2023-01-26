@@ -1,4 +1,4 @@
-export function generateChatStyles () {
+export function generateChatStyles ({ chat }) {
   return `
   /* ********************** */
   /* *** Chat Container *** */
@@ -22,20 +22,25 @@ export function generateChatStyles () {
     place-content: center;
   }
   
-  body,
-  yt-live-chat-renderer {
+  body{
     height: 100%;
     background-color: transparent !important;
   }
-
+  
   yt-live-chat-renderer {
     display: block !important;
+    height: 100%;
+    background-color: ${chat['background-color']} !important;
   }
   
   /* *** Adjust height container *** */
   yt-live-chat-item-list-renderer#item-offset {
     display: block !important;
     height: 100% !important; 
+    padding-top: ${chat['padding-block']}px;
+    padding-bottom: ${chat['padding-block']}px;
+    padding-right: ${chat['padding-inline']}px;
+    padding-left: ${chat['padding-inline']}px;
   }
   
   /* ********************* */
@@ -68,7 +73,7 @@ export function generateChatStyles () {
   yt-live-chat-text-message-renderer[is-highlighted],
   yt-live-chat-paid-message-renderer,
   yt-live-chat-legacy-paid-message-renderer {
-    margin-bottom: 1.25rem !important;
+    margin-bottom: ${chat['margin-bottom']}px !important;
   }
   
   /* *** Hide some elements *** */
