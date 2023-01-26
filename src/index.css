@@ -72,6 +72,10 @@ main{
   font-weight: 500;
 }
 
+.capitalize{
+  text-transform: capitalize;
+}
+
 iframe{
   width: 100%;
   height: 100%;
