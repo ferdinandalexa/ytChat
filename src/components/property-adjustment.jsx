@@ -19,6 +19,7 @@ function PropertyAdjustment ({ title, properties, type, ...props }) {
       {properties.map((property) =>
         <input
           key={`${title}-${property}`}
+          className='input'
           type={type}
           data-property={property}
           defaultValue={chatStyles[property]}

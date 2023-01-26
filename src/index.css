@@ -33,6 +33,10 @@ main{
   justify-content: start;
 }
 
+input{
+  border: none;
+}
+
 .setting-panel{
   width: 100%;
   max-width: 360px;
@@ -74,6 +78,20 @@ main{
 
 .capitalize{
   text-transform: capitalize;
+}
+
+.input{
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #323232;
+  background-color: #212121;
+  color: #cacaca;
+}
+
+.input:is(:hover, :focus){
+  border-bottom: 2px solid #414141;
+  background-color: #323232;
+  color: #fff;
+  outline: 2px solid #414141;
 }
 
 iframe{
