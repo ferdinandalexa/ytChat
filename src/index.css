@@ -46,6 +46,10 @@ input{
   color: #fff;
 }
 
+.set{
+  margin-bottom: 0.5rem;
+}
+
 .set summary{
   display: block;
   width: 100%;
