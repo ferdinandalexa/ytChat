@@ -9,7 +9,14 @@ const initialStyles = {
     'margin-bottom': 10
   },
   messages: {
-    appearence: {},
+    default: {
+      'name-color': '#DFDFDF',
+      'message-color': '#FFFFFF',
+      'background-color': '#212121',
+      'padding-inline': 16,
+      'padding-block': 16,
+      spacing: 8
+    },
     owner: {},
     moderator: {},
     member: {}
@@ -21,3 +28,4 @@ const initialStyles = {
 
 export const stylesAtom = atom(initialStyles);
 export const chatStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('chat'));
+export const messageStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('messages'));

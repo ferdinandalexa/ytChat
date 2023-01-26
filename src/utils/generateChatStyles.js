@@ -1,4 +1,4 @@
-export function generateChatStyles ({ chat }) {
+export function generateChatStyles ({ chat, messages }) {
   return `
   /* ********************** */
   /* *** Chat Container *** */
@@ -61,8 +61,6 @@ export function generateChatStyles ({ chat }) {
     line-height: 1.25 !important;
   }
   
-  yt-live-chat-text-message-renderer,
-  yt-live-chat-text-message-renderer[is-highlighted],
   yt-live-chat-legacy-paid-message-renderer {
     padding: 1.75rem !important;
     padding-bottom: 1.75rem !important;
@@ -119,7 +117,9 @@ export function generateChatStyles ({ chat }) {
   yt-live-chat-text-message-renderer[author-type],
   yt-live-chat-text-message-renderer[is-highlighted],
   yt-live-chat-text-message-renderer[author-type][is-highlighted] {
-    background-color: hsl(240deg 5% 10%) !important;
+    padding-inline: ${messages.default['padding-inline']}px !important;
+    padding-block: ${messages.default['padding-block']}px !important;
+    background-color: ${messages.default['background-color']} !important;
   }
   
   /* yt-live-chat-text-message-renderer #content,
@@ -133,7 +133,7 @@ export function generateChatStyles ({ chat }) {
     margin-right: 4px !important;
   
     /* Gap between author-name and menssage in breakline layout */
-    margin-bottom: 8px !important;
+    margin-bottom: ${messages.default.spacing}px !important;
   }
   
   yt-live-chat-text-message-renderer #author-badges,
@@ -145,7 +145,7 @@ export function generateChatStyles ({ chat }) {
   yt-live-chat-text-message-renderer[is-highlighted] #author-name,
   yt-live-chat-text-message-renderer[author-type] #author-name,
   yt-live-chat-text-message-renderer[author-type][is-highlighted] #author-name {
-    color: #DFDFDF !important;
+    color: ${messages.default['name-color']} !important;
     font-weight: 700 !important;
   }
   
@@ -177,7 +177,7 @@ export function generateChatStyles ({ chat }) {
   yt-live-chat-text-message-renderer[is-highlighted] #message {
     /* Oneline -> inline-block | Breakline -> block */
     display: block !important;
-    color: #fff;
+    color: ${messages.default['message-color']} !important;
   
     /* vertical-align: middle !important; */
   }
