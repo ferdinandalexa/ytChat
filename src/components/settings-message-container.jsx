@@ -11,9 +11,30 @@ function SettingsMessageContainer () {
           label='Message color'
           property='message-color'
         />
+      </AdjustmentContainer>
+
+      <AdjustmentContainer title='Author Name'>
         <PropertyAdjustmentMessage
           type='text'
-          label='Name color'
+          label='Default'
+          property='name-color'
+        />
+        <PropertyAdjustmentMessage
+          type='text'
+          authorType='owner'
+          label='Owner'
+          property='name-color'
+        />
+        <PropertyAdjustmentMessage
+          type='text'
+          authorType='moderator'
+          label='Moderator'
+          property='name-color'
+        />
+        <PropertyAdjustmentMessage
+          type='text'
+          authorType='member'
+          label='Member color'
           property='name-color'
         />
       </AdjustmentContainer>

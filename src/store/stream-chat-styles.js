@@ -17,9 +17,15 @@ const initialStyles = {
       'padding-block': 16,
       spacing: 8
     },
-    owner: {},
-    moderator: {},
-    member: {}
+    owner: {
+      'name-color': '#FFD400 '
+    },
+    moderator: {
+      'name-color': '#5A80F2'
+    },
+    member: {
+      'name-color': '#10A259'
+    }
   },
   sponsors: {
     'event-color': '#FFFFFF',

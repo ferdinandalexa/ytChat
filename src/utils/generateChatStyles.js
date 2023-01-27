@@ -148,18 +148,18 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] #author-name {
     padding: 0 !important;
     background-color: transparent !important;
-    color: hsl(50deg 100% 50%) !important;
+    color: ${messages.owner['name-color']} !important;
     vertical-align: middle !important;
   }
   
   yt-live-chat-text-message-renderer[author-type="moderator"] #author-name,
   yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] #author-name {
-    color: hsl(225deg 85% 65%) !important;
+    color: ${messages.moderator['name-color']} !important;
   }
   
   yt-live-chat-text-message-renderer[author-type="member"] #author-name,
   yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] #author-name {
-    color: hsl(150deg 82% 35%) !important;
+    color: ${messages.member['name-color']} !important;
   }
   
   yt-live-chat-text-message-renderer #author-name::after,
