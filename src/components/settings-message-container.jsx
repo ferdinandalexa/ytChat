@@ -5,14 +5,6 @@ import PropertyAdjustmentMessage from './property-adjustment-message';
 function SettingsMessageContainer () {
   return (
     <PropertySet name='Regular message'>
-      <AdjustmentContainer title='Text'>
-        <PropertyAdjustmentMessage
-          type='text'
-          label='Message color'
-          property='message-color'
-        />
-      </AdjustmentContainer>
-
       <AdjustmentContainer title='Author Name'>
         <PropertyAdjustmentMessage
           type='text'
@@ -36,6 +28,14 @@ function SettingsMessageContainer () {
           authorType='member'
           label='Member color'
           property='name-color'
+        />
+      </AdjustmentContainer>
+
+      <AdjustmentContainer title='Message'>
+        <PropertyAdjustmentMessage
+          type='text'
+          label='Message color'
+          property='message-color'
         />
       </AdjustmentContainer>
 
