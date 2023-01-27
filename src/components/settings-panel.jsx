@@ -2,6 +2,7 @@ import PropertySet from './property-set';
 import PropertyAdjustmentChat from './property-adjustment-chat';
 import PropertyAdjustmentMessage from './property-adjustment-message';
 import PropertyAdjustmentSponsor from './property-adjustment-sponsor';
+import PropertyAdjustmentSuperchat from './property-adjustment-superchat';
 
 function SettingsPanel () {
   return (
@@ -83,6 +84,30 @@ function SettingsPanel () {
           title='spacing'
           label={['between title and message']}
           properties={['spacing']}
+          min={0}
+        />
+      </PropertySet>
+
+      <PropertySet name='superchats'>
+        <PropertyAdjustmentSuperchat
+          type='number'
+          title='header padding'
+          label={['horizontal', 'vertical']}
+          properties={['header-padding-inline', 'header-padding-block']}
+          min={0}
+        />
+        <PropertyAdjustmentSuperchat
+          type='number'
+          title='spacing'
+          label={['between name and purchase amount']}
+          properties={['spacing']}
+          min={0}
+        />
+        <PropertyAdjustmentSuperchat
+          type='number'
+          title='content padding'
+          label={['horizontal', 'vertical']}
+          properties={['content-padding-inline', 'content-padding-block']}
           min={0}
         />
       </PropertySet>

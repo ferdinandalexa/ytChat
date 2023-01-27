@@ -1,4 +1,4 @@
-export function generateChatStyles ({ chat, messages, sponsors }) {
+export function generateChatStyles ({ chat, messages, sponsors, superchat }) {
   return `
   /* ********************** */
   /* *** Chat Container *** */
@@ -181,13 +181,17 @@ export function generateChatStyles ({ chat, messages, sponsors }) {
   /* *** Paid Messages *** */
   /* ********************* */
   
-  yt-live-chat-paid-message-renderer #header,
+  yt-live-chat-paid-message-renderer #header {
+    padding-inline: ${superchat['header-padding-inline']}px !important;
+    padding-block: ${superchat['header-padding-block']}px !important;
+  }
   yt-live-chat-paid-message-renderer #content {
-    padding: 1.25rem !important;
-    color: #fff;
+    padding-inline: ${superchat['content-padding-inline']}px !important;
+    padding-block: ${superchat['content-padding-block']}px !important;
   }
   
   yt-live-chat-paid-message-renderer #author-name {
+    margin-bottom: ${superchat.spacing}px !important; 
     font-weight: 700 !important;
   }
   

@@ -29,7 +29,13 @@ const initialStyles = {
     'background-color': '#10A259',
     spacing: 8
   },
-  superchat: {},
+  superchat: {
+    'header-padding-inline': 16,
+    'header-padding-block': 16,
+    spacing: 8,
+    'content-padding-inline': 16,
+    'content-padding-block': 16
+  },
   animation: {}
 };
 
@@ -37,3 +43,4 @@ export const stylesAtom = atom(initialStyles);
 export const chatStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('chat'));
 export const messageStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('messages'));
 export const sponsorStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('sponsors'));
+export const superchatStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('superchat'));
