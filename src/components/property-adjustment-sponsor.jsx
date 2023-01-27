@@ -18,7 +18,7 @@ function PropertyAdjustmentSponsor ({ label, property, type, ...props }) {
     <PropertyAdjustment
       label={label}
       type={type}
-      data-property={property}
+      property={property}
       defaultValue={sponsorStyles[property]}
       onChange={handleChange}
       {...props}

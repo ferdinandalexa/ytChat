@@ -18,7 +18,7 @@ function PropertyAdjustmentSuperchat ({ label, property, type, ...props }) {
     <PropertyAdjustment
       label={label}
       type={type}
-      data-property={property}
+      property={property}
       defaultValue={superchatStyles[property]}
       onChange={handleChange}
       {...props}

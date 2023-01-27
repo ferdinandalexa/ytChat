@@ -4,12 +4,12 @@ import PropertyAdjustmentAnimation from './property-adjustment-animation';
 
 function SettingsAnimationContainer () {
   return (
-    <PropertySet name='animation'>
+    <PropertySet name='Animation'>
       {/* <AdjustmentContainer title='Type' /> */}
       <AdjustmentContainer title='Duration'>
         <PropertyAdjustmentAnimation
           type='number'
-          label='seconds'
+          label='Seconds'
           property='animation-duration'
           animate='in'
         />

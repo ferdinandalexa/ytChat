@@ -18,7 +18,7 @@ function PropertyAdjustmentChat ({ label, property, type, ...props }) {
     <PropertyAdjustment
       label={label}
       type={type}
-      data-property={property}
+      property={property}
       defaultValue={chatStyles[property]}
       onChange={handleChange}
       {...props}

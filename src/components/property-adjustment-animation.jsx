@@ -21,7 +21,7 @@ function PropertyAdjustmentAnimation ({ label, property, type, animate, ...props
     <PropertyAdjustment
       label={label}
       type={type}
-      data-property={property}
+      property={property}
       defaultValue={animationStyles[animate][property]}
       onChange={handleChange}
       {...props}

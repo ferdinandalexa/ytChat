@@ -21,7 +21,7 @@ function PropertyAdjustmentMessage ({ label, property, type, authorType = 'defau
     <PropertyAdjustment
       label={label}
       type={type}
-      data-property={property}
+      property={property}
       defaultValue={messageStyles[authorType][property]}
       onChange={handleChange}
       {...props}

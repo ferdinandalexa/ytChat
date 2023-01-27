@@ -1,6 +1,6 @@
 function PropertyAdjustment ({ title, label, property, type, ...props }) {
   return (
-    <label className='capitalize'>
+    <label>
       <span>{label}</span>
       <input
         className='input'

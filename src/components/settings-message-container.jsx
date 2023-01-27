@@ -4,47 +4,47 @@ import PropertyAdjustmentMessage from './property-adjustment-message';
 
 function SettingsMessageContainer () {
   return (
-    <PropertySet name='regular message'>
-      <AdjustmentContainer title='text'>
+    <PropertySet name='Regular message'>
+      <AdjustmentContainer title='Text'>
         <PropertyAdjustmentMessage
           type='text'
-          label='message color'
+          label='Message color'
           property='message-color'
         />
         <PropertyAdjustmentMessage
           type='text'
-          label='name color'
+          label='Name color'
           property='name-color'
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='background'>
+      <AdjustmentContainer title='Background'>
         <PropertyAdjustmentMessage
           type='text'
-          label='color'
+          label='Color'
           property='background-color'
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='padding'>
+      <AdjustmentContainer title='Padding'>
         <PropertyAdjustmentMessage
           type='number'
-          label='horizontal'
+          label='Horizontal'
           property='padding-inline'
           min={0}
         />
         <PropertyAdjustmentMessage
           type='number'
-          label='vertical'
+          label='Vertical'
           property='padding-block'
           min={0}
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='spacing'>
+      <AdjustmentContainer title='Spacing'>
         <PropertyAdjustmentMessage
           type='number'
-          label='between name and message'
+          label='Between name and message'
           property='spacing'
           min={0}
         />

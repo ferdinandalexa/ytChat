@@ -4,47 +4,47 @@ import PropertyAdjustmentSponsor from './property-adjustment-sponsor';
 
 function SettingsSponsorContainer () {
   return (
-    <PropertySet name='sponsors'>
-      <AdjustmentContainer title='text'>
+    <PropertySet name='Sponsors'>
+      <AdjustmentContainer title='Text'>
         <PropertyAdjustmentSponsor
           type='text'
-          label='title color'
+          label='Title color'
           property='event-color'
         />
         <PropertyAdjustmentSponsor
           type='text'
-          label='message color'
+          label='Message color'
           property='detail-color'
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='background'>
+      <AdjustmentContainer title='Background'>
         <PropertyAdjustmentSponsor
           type='text'
-          label='color'
+          label='Color'
           property='background-color'
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='padding'>
+      <AdjustmentContainer title='Padding'>
         <PropertyAdjustmentSponsor
           type='number'
-          label='vertical'
+          label='Vertical'
           property='padding-block'
           min={0}
         />
         <PropertyAdjustmentSponsor
           type='number'
-          label='horizontal'
+          label='Horizontal'
           property='padding-inline'
           min={0}
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='spacing'>
+      <AdjustmentContainer title='Spacing'>
         <PropertyAdjustmentSponsor
           type='number'
-          label='between title and message'
+          label='Between title and message'
           property='spacing'
           min={0}
         />

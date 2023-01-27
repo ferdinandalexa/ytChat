@@ -4,41 +4,41 @@ import PropertyAdjustmentSuperchat from './property-adjustment-superchat';
 
 function SettingsSuperchatContainer () {
   return (
-    <PropertySet name='superchats'>
-      <AdjustmentContainer title='header padding'>
+    <PropertySet name='Superchats'>
+      <AdjustmentContainer title='Header padding'>
         <PropertyAdjustmentSuperchat
           type='number'
-          label='horizontal'
+          label='Horizontal'
           property='header-padding-inline'
           min={0}
         />
         <PropertyAdjustmentSuperchat
           type='number'
-          label='vertical'
+          label='Vertical'
           property='header-padding-block'
           min={0}
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='spacing'>
+      <AdjustmentContainer title='Spacing'>
         <PropertyAdjustmentSuperchat
           type='number'
-          label='between name and purchase amount'
+          label='Between name and purchase amount'
           property='spacing'
           min={0}
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='content padding'>
+      <AdjustmentContainer title='Content Padding'>
         <PropertyAdjustmentSuperchat
           type='number'
-          label='horizontal'
+          label='Horizontal'
           property='content-padding-inline'
           min={0}
         />
         <PropertyAdjustmentSuperchat
           type='number'
-          label='vertical'
+          label='Vertical'
           property='content-padding-block'
           min={0}
         />

@@ -4,34 +4,34 @@ import PropertyAdjustmentChat from './property-adjustment-chat';
 
 function SettingsChatContainer () {
   return (
-    <PropertySet name='chat'>
-      <AdjustmentContainer title='background'>
+    <PropertySet name='Chat'>
+      <AdjustmentContainer title='Background'>
         <PropertyAdjustmentChat
           type='text'
-          label='color'
+          label='Color'
           property='background-color'
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='padding'>
+      <AdjustmentContainer title='Padding'>
         <PropertyAdjustmentChat
           type='number'
-          label='horizontal'
+          label='Horizontal'
           property='padding-inline'
           min={0}
         />
         <PropertyAdjustmentChat
           type='number'
-          label='vertical'
+          label='Vertical'
           property='padding-block'
           min={0}
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='spacing'>
+      <AdjustmentContainer title='Spacing'>
         <PropertyAdjustmentChat
           type='number'
-          label='margin'
+          label='Margin'
           property='margin-bottom'
           min={0}
         />
