@@ -1,4 +1,4 @@
-export function generateChatStyles ({ chat, messages, sponsors, superchat }) {
+export function generateChatStyles ({ chat, messages, sponsors, superchat, animation }) {
   return `
   /* ********************** */
   /* *** Chat Container *** */
@@ -223,7 +223,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat }) {
   @keyframes slide-in {
     0% {
       opacity: 0;
-      transform: translateX(16px);
+      transform: translateX(${animation.in.direction === 'left' ? '16' : '-16'}px);
     }
   
     100% {
@@ -232,13 +232,25 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat }) {
     }
   }
   
+  @keyframes slide-out {
+    0% {
+      opacity: 1;
+      transform: none;
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+  }
+  
   yt-live-chat-text-message-renderer,
   yt-live-chat-text-message-renderer[is-highlighted],
   yt-live-chat-paid-message-renderer,
   yt-live-chat-legacy-paid-message-renderer {
     animation-direction: alternate;
-    animation-duration: 0.25s;
-    animation-fill-mode: forwards;
+    animation-duration: ${animation.in['animation-duration']}s;
+    animation-fill-mode: both;
     animation-name: slide-in;
     animation-timing-function: ease-in;
   }

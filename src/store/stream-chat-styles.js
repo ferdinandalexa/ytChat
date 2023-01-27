@@ -36,7 +36,13 @@ const initialStyles = {
     'content-padding-inline': 16,
     'content-padding-block': 16
   },
-  animation: {}
+  animation: {
+    in: {
+      'animation-duration': 0.25,
+      direction: 'left'
+    },
+    out: {}
+  }
 };
 
 export const stylesAtom = atom(initialStyles);
@@ -44,3 +50,4 @@ export const chatStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('chat'
 export const messageStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('messages'));
 export const sponsorStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('sponsors'));
 export const superchatStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('superchat'));
+export const animationStylesAtom = focusAtom(stylesAtom, (optic) => optic.prop('animation'));
