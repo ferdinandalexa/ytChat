@@ -4,9 +4,7 @@ function PropertySet ({ name, children }) {
       <summary>
         <h2 className='capitalize'>{name}</h2>
       </summary>
-      <ul>
-        {children}
-      </ul>
+      {children}
     </details>
   );
 }

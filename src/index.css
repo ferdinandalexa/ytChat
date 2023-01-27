@@ -66,14 +66,10 @@ input{
   font-size: 1rem;
 }
 
-.set ul{
+.set section{
+  margin-block: 1.25rem;
   padding-inline: 1rem;
 }
-
-.set li{
-  margin-bottom: 1.25rem;
-}
-
 
 .set .adjustment h3 {
   margin-bottom: 0.5rem;
