@@ -18,6 +18,23 @@ function SettingsSponsorContainer () {
         />
       </AdjustmentContainer>
 
+      <AdjustmentContainer title='Avatar'>
+        <PropertyAdjustmentSponsor
+          type='number'
+          label='Avatar size'
+          property='avatar-size'
+          min='16'
+          max='32'
+        />
+        <PropertyAdjustmentSponsor
+          type='number'
+          label='Rounded'
+          property='rounded'
+          min='16'
+          max='32'
+        />
+      </AdjustmentContainer>
+
       <AdjustmentContainer title='Background'>
         <PropertyAdjustmentSponsor
           type='text'

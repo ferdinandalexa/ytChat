@@ -29,6 +29,14 @@ function SettingsChatContainer () {
         />
       </AdjustmentContainer>
 
+      <AdjustmentContainer title='Toggles'>
+        <PropertyAdjustmentChat
+          type='text'
+          label='Show/Hide avatar'
+          property='show-avatar'
+        />
+      </AdjustmentContainer>
+
       <AdjustmentContainer title='Padding'>
         <PropertyAdjustmentChat
           type='number'

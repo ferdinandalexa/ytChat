@@ -31,6 +31,23 @@ function SettingsMessageContainer () {
         />
       </AdjustmentContainer>
 
+      <AdjustmentContainer title='Avatar'>
+        <PropertyAdjustmentMessage
+          type='number'
+          label='Avatar size'
+          property='avatar-size'
+          min='16'
+          max='32'
+        />
+        <PropertyAdjustmentMessage
+          type='number'
+          label='Rounded'
+          property='rounded'
+          min='16'
+          max='32'
+        />
+      </AdjustmentContainer>
+
       <AdjustmentContainer title='Message'>
         <PropertyAdjustmentMessage
           type='text'

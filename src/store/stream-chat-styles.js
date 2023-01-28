@@ -4,6 +4,7 @@ import { focusAtom } from 'jotai-optics';
 const initialStyles = {
   chat: {
     'background-color': 'transparent',
+    'show-avatar': 'true',
     'padding-inline': 10,
     'padding-block': 10,
     'margin-bottom': 10,
@@ -14,6 +15,8 @@ const initialStyles = {
     default: {
       'name-color': '#DFDFDF',
       'message-color': '#FFFFFF',
+      'avatar-size': 20,
+      rounded: 20,
       'background-color': '#212121',
       'padding-inline': 16,
       'padding-block': 16,
@@ -32,6 +35,8 @@ const initialStyles = {
   sponsors: {
     'event-color': '#FFFFFF',
     'detail-color': '#FFFFFF',
+    'avatar-size': 20,
+    rounded: 20,
     'padding-inline': 16,
     'padding-block': 16,
     'background-color': '#10A259',

@@ -100,7 +100,8 @@ input{
 }
 
 .set section{
-  margin-block: 1.25rem;
+  margin-top: 1.75rem;
+  margin-bottom: 2.25rem;
   padding-inline: 1rem;
 }
 

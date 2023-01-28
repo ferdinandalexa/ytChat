@@ -58,12 +58,18 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-paid-message-renderer,
   yt-live-chat-legacy-paid-message-renderer {
     display: block !important;
-    overflow: hidden;
+    overflow: hidden !important;
     max-width: 640px !important;
     height: max-content !important;
     border-radius: 8px !important;
     font-size: 1.8rem !important;
     line-height: 1.25 !important;
+  }
+
+  yt-live-chat-text-message-renderer #content,
+  yt-live-chat-text-message-renderer[is-highlighted] #content,
+  yt-live-chat-legacy-paid-message-renderer #content{
+    display: inline !important;
   }
 
   /** *** Spacing between messages *** */
@@ -81,18 +87,29 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
     margin-bottom: 0 !important;
   }
   
-  /* *** Hide some elements *** */
+  /* *** Hide some elements *** */  
   yt-live-chat-text-message-renderer #author-photo,
-  yt-live-chat-text-message-renderer[is-highlighted] #author-photo,
-  yt-live-chat-paid-message-renderer #author-photo,
-  yt-live-chat-legacy-paid-message-renderer #author-photo {
-    display: none !important;
+  yt-live-chat-text-message-renderer[is-highlighted] #author-photo {
+    overflow: hidden !important;
+    display: ${chat['show-avatar'] === 'true' ? 'inline-block' : 'none'} !important;
+    width: ${messages.default['avatar-size']}px !important; 
+    height: ${messages.default['avatar-size']}px !important; 
+    margin-bottom: 6px !important;
+    border-radius: ${messages.default.rounded}px !important;
+    vertical-align: middle !important;
   }
   
-  yt-live-chat-text-message-renderer #author-photo,
-  yt-live-chat-text-message-renderer[is-highlighted] #author-photo,
-  yt-live-chat-paid-message-renderer #author-photo,
   yt-live-chat-legacy-paid-message-renderer #author-photo {
+    overflow: hidden !important;
+    display: ${chat['show-avatar'] === 'true' ? 'inline-block' : 'none'} !important;
+    width: ${sponsors['avatar-size']}px !important; 
+    height: ${sponsors['avatar-size']}px !important; 
+    margin-bottom: 6px !important;
+    border-radius: ${sponsors.rounded}px !important;
+    vertical-align: middle !important;
+  }
+
+  yt-live-chat-paid-message-renderer #author-photo{
     display: none !important;
   }
   
@@ -122,9 +139,6 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
     padding-block: ${messages.default['padding-block']}px !important;
     background-color: ${messages.default['background-color']} !important;
   }
-  
-  /* yt-live-chat-text-message-renderer #content,
-    yt-live-chat-text-message-renderer[is-highlighted] #content {} */
   
   /* *** Content layout *** */
   yt-live-chat-author-chip {
@@ -216,6 +230,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   }
   
   yt-live-chat-legacy-paid-message-renderer #event-text {
+    display: inline-block !important;
     margin-bottom: ${sponsors.spacing}px !important; 
     color: ${sponsors['event-color']} !important;
     font-family: ${chat['font-title']};
