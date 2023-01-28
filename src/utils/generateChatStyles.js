@@ -72,15 +72,6 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-legacy-paid-message-renderer {
     margin-bottom: ${chat['margin-bottom']}px !important;
   }
-
-  /*
-  yt-live-chat-text-message-renderer:has(+ yt-live-chat-viewer-engagement-message-renderer),
-  yt-live-chat-text-message-renderer[is-highlighted]:has(+ yt-live-chat-viewer-engagement-message-renderer),
-  yt-live-chat-paid-message-renderer:has(+ yt-live-chat-viewer-engagement-message-renderer),
-  yt-live-chat-legacy-paid-message-renderer:has(+ yt-live-chat-viewer-engagement-message-renderer) {
-    margin-bottom: 0 !important;
-  }
-  */
   
   /* *** Hide some elements *** */  
   yt-live-chat-text-message-renderer #author-photo,
