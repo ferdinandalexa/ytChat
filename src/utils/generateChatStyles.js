@@ -4,6 +4,11 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   /* *** Chat Container *** */
   /* ********************** */
   
+  ${chat['font-title'] === chat['font-body']
+    ? `@import url('https://fonts.googleapis.com/css2?family=${chat['font-title'].split(' ').join('+')}:wght@400;700&display=swap');`
+    : `@import url('https://fonts.googleapis.com/css2?family=${chat['font-title'].split(' ').join('+')}:wght@400;700&family=${chat['font-body'].split(' ').join('+')}:wght@400;700&display=swap');`
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -17,7 +22,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
     display: grid;
     overflow: hidden;
     margin: 0;
-    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, sans-serif;
     letter-spacing: 0.1ch;
     place-content: center;
   }
@@ -94,6 +99,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-text-message-renderer #timestamp,
   yt-live-chat-text-message-renderer[is-highlighted] #timestamp {
     display: none !important;
+    font-family: ${chat['font-body']};
     vertical-align: middle !important;
   }
   
@@ -141,6 +147,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-text-message-renderer[author-type] #author-name,
   yt-live-chat-text-message-renderer[author-type][is-highlighted] #author-name {
     color: ${messages.default['name-color']} !important;
+    font-family: ${chat['font-title']};
     font-weight: 700 !important;
   }
   
@@ -173,7 +180,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
     /* Oneline -> inline-block | Breakline -> block */
     display: block !important;
     color: ${messages.default['message-color']} !important;
-  
+    font-family: ${chat['font-body']};
     /* vertical-align: middle !important; */
   }
   
@@ -192,10 +199,12 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   
   yt-live-chat-paid-message-renderer #author-name {
     margin-bottom: ${superchat.spacing}px !important; 
+    font-family: ${chat['font-title']};
     font-weight: 700 !important;
   }
   
   yt-live-chat-paid-message-renderer #purchase-amount {
+    font-family: ${chat['font-body']};
     font-size: 1.6rem !important;
   }
   
@@ -207,12 +216,14 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   }
   
   yt-live-chat-legacy-paid-message-renderer #event-text {
-    font-weight: 700 !important;
     margin-bottom: ${sponsors.spacing}px !important; 
     color: ${sponsors['event-color']} !important;
+    font-family: ${chat['font-title']};
+    font-weight: 700 !important;
   }
 
   yt-live-chat-legacy-paid-message-renderer #detail-text {
+    font-family: ${chat['font-body']};
     color: ${sponsors['detail-color']} !important;
   }
 

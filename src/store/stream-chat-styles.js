@@ -6,7 +6,9 @@ const initialStyles = {
     'background-color': 'transparent',
     'padding-inline': 10,
     'padding-block': 10,
-    'margin-bottom': 10
+    'margin-bottom': 10,
+    'font-title': 'Roboto',
+    'font-body': 'Roboto'
   },
   messages: {
     default: {

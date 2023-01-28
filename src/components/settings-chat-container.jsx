@@ -5,6 +5,22 @@ import PropertyAdjustmentChat from './property-adjustment-chat';
 function SettingsChatContainer () {
   return (
     <PropertySet name='Chat'>
+      {/* <AdjustmentContainer title='Heading Font'>
+        <PropertyAdjustmentChat
+          type='text'
+          label='Select a font'
+          property='font-title'
+        />
+      </AdjustmentContainer>
+
+      <AdjustmentContainer title='Body Font'>
+        <PropertyAdjustmentChat
+          type='text'
+          label='Select a font'
+          property='font-body'
+        />
+      </AdjustmentContainer> */}
+
       <AdjustmentContainer title='Background'>
         <PropertyAdjustmentChat
           type='text'
