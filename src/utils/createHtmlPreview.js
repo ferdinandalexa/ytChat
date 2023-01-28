@@ -16,13 +16,15 @@ export function createHtmlPreview (styles = '') {
     </head>
     <body>
       <yt-live-chat-renderer>
-        <yt-live-chat-item-list-renderer id="item-offset">      
+        <yt-live-chat-item-list-renderer>
+        <div id="item-offset">
           ${RegularMessage()}
           ${RegularMessage('owner')}
           ${RegularMessage('moderator')}
           ${RegularMessage('member')}
           ${SponsorMessage()}
           ${SuperChat()}
+        </div>
         </yt-live-chat-item-list-renderer>
       </yt-live-chat-renderer>
     </body>

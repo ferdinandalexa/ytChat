@@ -19,27 +19,20 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   }
   
   body {
-    display: grid;
     overflow: hidden;
     margin: 0;
     font-family: system-ui, sans-serif;
     letter-spacing: 0.1ch;
-    place-content: center;
   }
   
-  body{
-    height: 100%;
-    background-color: transparent !important;
-  }
-  
+  body,
   yt-live-chat-renderer {
-    display: block !important;
     height: 100%;
     background-color: ${chat['background-color']} !important;
   }
   
   /* *** Adjust height container *** */
-  yt-live-chat-item-list-renderer#item-offset {
+  yt-live-chat-item-list-renderer #item-offset {
     display: block !important;
     height: 100% !important; 
     padding-top: ${chat['padding-block']}px;
