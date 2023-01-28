@@ -33,6 +33,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   
   /* *** Adjust height container *** */
   yt-live-chat-item-list-renderer #item-offset {
+    --offset-inline: ${chat['padding-block']}px;
     display: block !important;
     height: 100% !important; 
     padding-top: ${chat['padding-block']}px;
@@ -73,12 +74,14 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
     margin-bottom: ${chat['margin-bottom']}px !important;
   }
 
-  yt-live-chat-text-message-renderer:last-child,
-  yt-live-chat-text-message-renderer[is-highlighted]:last-child,
-  yt-live-chat-paid-message-renderer:last-child,
-  yt-live-chat-legacy-paid-message-renderer:last-child {
+  /*
+  yt-live-chat-text-message-renderer:has(+ yt-live-chat-viewer-engagement-message-renderer),
+  yt-live-chat-text-message-renderer[is-highlighted]:has(+ yt-live-chat-viewer-engagement-message-renderer),
+  yt-live-chat-paid-message-renderer:has(+ yt-live-chat-viewer-engagement-message-renderer),
+  yt-live-chat-legacy-paid-message-renderer:has(+ yt-live-chat-viewer-engagement-message-renderer) {
     margin-bottom: 0 !important;
   }
+  */
   
   /* *** Hide some elements *** */  
   yt-live-chat-text-message-renderer #author-photo,
@@ -278,7 +281,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   /* *** General adjusts *** */
   /* *********************** */
   
-  /* *** Hidde YT Chat interface *** */
+  /* *** Hidde and Normalize YT Chat interface *** */
   yt-live-chat-header-renderer,
   yt-live-chat-message-input-renderer {
     display: none !important;
@@ -299,9 +302,12 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
     display: none !important;
   }
   
-  /* *** Hide scrollbar *** */
   yt-live-chat-item-list-renderer #items {
+    bottom: ${parseInt(chat['padding-block']) - parseInt(chat['margin-bottom'])}px !important;
+    left: var(--offset-inline) !important;
+    right: var(--offset-inline) !important;
     overflow: hidden !important;
+    padding: 0 !important;
   }
   
   yt-live-chat-item-list-renderer #item-scroller {

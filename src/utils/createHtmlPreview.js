@@ -18,12 +18,16 @@ export function createHtmlPreview (styles = '') {
       <yt-live-chat-renderer>
         <yt-live-chat-item-list-renderer>
         <div id="item-offset">
-          ${RegularMessage()}
-          ${RegularMessage('owner')}
-          ${RegularMessage('moderator')}
-          ${RegularMessage('member')}
-          ${SponsorMessage()}
-          ${SuperChat()}
+          <div id="items">
+            ${RegularMessage()}
+            ${RegularMessage('owner')}
+            ${RegularMessage('moderator')}
+            ${RegularMessage('member')}
+            ${SponsorMessage()}
+            ${SuperChat()}
+            <yt-live-chat-viewer-engagement-message-renderer>
+            </yt-live-chat-viewer-engagement-message-renderer>
+          </div>
         </div>
         </yt-live-chat-item-list-renderer>
       </yt-live-chat-renderer>
