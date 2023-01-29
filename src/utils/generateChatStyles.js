@@ -34,7 +34,8 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   /* *** Adjust height container *** */
   yt-live-chat-item-list-renderer #item-offset {
     display: block !important;
-    height: 100% !important; 
+    height: 100% !important;
+    position: relative !important;
     padding-top: ${chat['padding-block']}px;
     padding-bottom: ${chat['padding-block']}px;
     padding-right: ${chat['padding-inline']}px;
@@ -293,6 +294,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   }
   
   yt-live-chat-item-list-renderer #items {
+    position: absolute !important;
     bottom: ${parseInt(chat['padding-block']) - parseInt(chat['margin-bottom'])}px !important;
     left: ${chat['padding-inline']}px !important;
     right: ${chat['padding-inline']}px !important;

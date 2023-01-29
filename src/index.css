@@ -168,6 +168,7 @@ input{
   height: 100%;
   margin: auto;
   background-color: transparent;
+  padding-block: 1rem;
 }
 
 .preview-panel .button {
