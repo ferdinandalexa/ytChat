@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { useAtom } from 'jotai';
 import { stylesAtom } from '../store/stream-chat-styles';
 
