@@ -1,14 +1,24 @@
+import Checkbox from './inputs/checkbox';
+import TextField from './inputs/textfield';
+
+const components = {
+  checkbox: Checkbox,
+  text: TextField,
+  number: TextField
+};
+
 function PropertyAdjustment ({ title, label, property, type, ...props }) {
+  const Component = components[type];
+
   return (
-    <label>
-      <span>{label}</span>
-      <input
-        className='input'
-        type={type}
-        data-property={property}
-        {...props}
-      />
-    </label>
+
+    <Component
+      type={type}
+      label={label}
+      data-property={property}
+      {...props}
+    />
+
   );
 }
 

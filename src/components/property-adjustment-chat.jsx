@@ -7,10 +7,13 @@ function PropertyAdjustmentChat ({ label, property, type, ...props }) {
   const [chatStyles, setChatStyles] = useAtom(chatStylesAtom);
 
   const handleChange = debounce((e) => {
-    const { value, dataset: { property } } = e.target;
+    const { value, dataset: { property }, checked } = e.target;
+
+    const stateValue = type === 'checkbox' ? checked : value;
+
     setChatStyles((prev) => ({
       ...prev,
-      [property]: value
+      [property]: stateValue
     }));
   }, 250);
 

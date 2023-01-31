@@ -4,7 +4,7 @@ import { focusAtom } from 'jotai-optics';
 const initialStyles = {
   chat: {
     'background-color': 'transparent',
-    'show-avatar': 'true',
+    'show-avatar': true,
     'padding-inline': 10,
     'padding-block': 10,
     'margin-bottom': 10,

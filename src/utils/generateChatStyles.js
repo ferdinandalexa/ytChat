@@ -78,7 +78,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-text-message-renderer #author-photo,
   yt-live-chat-text-message-renderer[is-highlighted] #author-photo {
     overflow: hidden !important;
-    display: ${chat['show-avatar'] === 'true' ? 'inline-block' : 'none'} !important;
+    display: ${chat['show-avatar'] ? 'inline-block' : 'none'} !important;
     width: ${messages.default['avatar-size']}px !important; 
     height: ${messages.default['avatar-size']}px !important; 
     margin-bottom: 6px !important;
