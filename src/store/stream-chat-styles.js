@@ -7,6 +7,7 @@ const initialStyles = {
     'show-avatar': true,
     'padding-inline': 10,
     'padding-block': 10,
+    'full-width': true,
     'margin-bottom': 10,
     'font-title': 'Roboto',
     'font-body': 'Roboto'

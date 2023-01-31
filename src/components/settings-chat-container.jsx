@@ -13,11 +13,16 @@ function SettingsChatContainer () {
         />
       </AdjustmentContainer>
 
-      <AdjustmentContainer title='Toggles'>
+      <AdjustmentContainer title='Toggles' layout='col'>
         <PropertyAdjustmentChat
           type='checkbox'
           label='Show/Hide avatar'
           property='show-avatar'
+        />
+        <PropertyAdjustmentChat
+          type='checkbox'
+          label='Full width'
+          property='full-width'
         />
       </AdjustmentContainer>
 

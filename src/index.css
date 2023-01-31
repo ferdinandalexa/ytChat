@@ -119,8 +119,16 @@ input{
 .set .adjustment div{
   display: grid;
   width: 100%;
+  padding-top: 0.25rem;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+
+.set .adjustment div.col{
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: initial;
 }
 
 .set .adjustment label span{

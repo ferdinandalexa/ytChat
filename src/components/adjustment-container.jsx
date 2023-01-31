@@ -1,8 +1,8 @@
-function AdjustmentContainer ({ title, children }) {
+function AdjustmentContainer ({ title, layout = 'row', children }) {
   return (
     <section className='adjustment'>
       <h3 className='capitalize'>{title}</h3>
-      <div>
+      <div className={layout}>
         {children}
       </div>
     </section>

@@ -53,6 +53,7 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   yt-live-chat-legacy-paid-message-renderer {
     display: block !important;
     overflow: hidden !important;
+    width: ${chat['full-width'] ? '100%' : 'max-content'} !important;
     max-width: 640px !important;
     height: max-content !important;
     border-radius: 8px !important;
@@ -210,7 +211,6 @@ export function generateChatStyles ({ chat, messages, sponsors, superchat, anima
   }
   
   yt-live-chat-legacy-paid-message-renderer {
-    width: initial !important;
     padding-inline: ${sponsors['padding-inline']}px !important;
     padding-block: ${sponsors['padding-block']}px !important;
     background-color: ${sponsors['background-color']} !important;
